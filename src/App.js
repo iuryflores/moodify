@@ -15,11 +15,10 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <h1>Moodify</h1>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/mood-quiz" element={<MoodQuiz />} />
-        <Route path="/mood-choice" element={<MoodChoice />} />
+        <Route path="/mood-choice/:mood" element={<MoodChoice />} />
         <Route path="/mood-selection" element={<MoodSelection />} />
         <Route path="/mood-result" element={<MoodResult />} />
         <Route path="/mood-enhancer" element={<MoodEnhancer />} />
