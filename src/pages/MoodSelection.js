@@ -1,29 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { React, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const MoodSelection = () => {
-  const moodArray = [
-    "Happy",
-    "Sad",
-    "Angry",
-    "Peaceful",
-    "Hopeless",
-    "Hopeful",
-    "Excited",
-    "Bored",
-    "Joyous",
-    "Melancholic",
-  ];
+  const [mood, setMood] = useState([
+    { type: 'Happy' },
+    { type: 'Hopeful' },
+    { type: 'Joyous' },
+    { type: 'Excited' },
+    { type: 'Peaceful' },
+    { type: 'Angry' },
+    { type: 'Bored' },
+    { type: 'Melancholic' },
+    { type: 'Hopeless' },
+    { type: 'Sad' },
+  ])
 
   return (
     <div>
       <p>Mood Selection</p>
-      {moodArray.map((mood, index) => (
-        <Link to={`/mood-choice/${mood}`} key={index}>
-          {" "}
-          {mood}{" "}
+      {mood.map((mood, index) => (
+        <Link to={`/mood-choice/${mood.type}`} key={index}>
+          {mood.type}
         </Link>
       ))}
     </div>
-  );
-};
+  )
+}
