@@ -1,9 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
+import { Link } from 'react-router-dom'
 
 export const QuestionList = () => {
   const [questions, setQuestions] = useState([])
+  let [getValue, setGetValue] = useState(0)
 
   const getQuestions = async () => {
     const { data } = await axios.get(
@@ -16,11 +18,47 @@ export const QuestionList = () => {
     getQuestions()
   }, [])
 
+  const addedAnswerValue = (value) => {
+    setGetValue((getValue += value))
+    console.log(getValue)
+  }
+
+  let moodType
+
+  if (getValue < 10) {
+    moodType = 'Sad'
+  } else if (getValue >= 10 && getValue < 20) {
+    moodType = 'Hopeless'
+  } else if (getValue >= 20 && getValue < 30) {
+    moodType = 'Melancholic'
+  } else if (getValue >= 30 && getValue < 40) {
+    moodType = 'Bored'
+  } else if (getValue >= 40 && getValue < 50) {
+    moodType = 'Angry'
+  } else if (getValue >= 50 && getValue < 60) {
+    moodType = 'Peaceful'
+  } else if (getValue >= 60 && getValue < 70) {
+    moodType = 'Excited'
+  } else if (getValue >= 70 && getValue < 80) {
+    moodType = 'Joyous'
+  } else if (getValue >= 80 && getValue < 90) {
+    moodType = 'Hopeful'
+  } else {
+    moodType = 'Happy'
+  }
+
   return (
     <div>
       {questions.map((question) => (
-        <QuestionCard key={question._id} {...question} />
+        <QuestionCard
+          key={question._id}
+          {...question}
+          addedAnswerValue={addedAnswerValue}
+        />
       ))}
+      <Link to={`/mood-choice/${moodType}`} key={moodType}>
+        Quiz Result!
+      </Link>
     </div>
   )
 }

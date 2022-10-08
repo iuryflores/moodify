@@ -1,21 +1,49 @@
 import React from 'react'
 
-export const QuestionCard = ({ _id, questionText, answerOptions }) => {
+export const QuestionCard = ({
+  _id,
+  questionText,
+  answerOptions,
+  addedAnswerValue,
+}) => {
   return (
     <div key={_id}>
       <p>Question: {questionText}</p>
-      <p>{answerOptions}</p>
-      <button>{answerOptions.answerText1}</button>
-      <button>{answerOptions.answerText2}</button>
-      <button>{answerOptions.answerText3}</button>
-      <button>{answerOptions.answerText4}</button>
-      <button>{answerOptions.answerText5}</button>
+      <button
+        onClick={() => {
+          addedAnswerValue(answerOptions[0].value)
+        }}
+      >
+        {answerOptions[0].answerText1}
+      </button>
+      <button
+        onClick={() => {
+          addedAnswerValue(answerOptions[1].value)
+        }}
+      >
+        {answerOptions[1].answerText2}
+      </button>
+      <button
+        onClick={() => {
+          addedAnswerValue(answerOptions[2].value)
+        }}
+      >
+        {answerOptions[2].answerText3}
+      </button>
+      <button
+        onClick={() => {
+          addedAnswerValue(answerOptions[3].value)
+        }}
+      >
+        {answerOptions[3].answerText4}
+      </button>
+      <button
+        onClick={() => {
+          addedAnswerValue(answerOptions[4].value)
+        }}
+      >
+        {answerOptions[4].answerText5}
+      </button>
     </div>
   )
 }
-
-// const addAnswerValue = () => {
-//   questions.map((question) => {
-//     return (total += onclick.question.answerOptions.value)
-//   })
-// }
