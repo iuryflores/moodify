@@ -1,23 +1,23 @@
-import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from 'react-router-dom'
+import './App.css'
 import {
   HomePage,
-  MoodQuiz,
+  QuestionList,
   MoodChoice,
   MoodSelection,
   MoodResult,
   MoodEnhancer,
   MediaDetails,
-} from "./pages";
-import { NavBar } from "./components/NavBar";
+} from './pages'
+import { NavBar } from './components/NavBar'
 
 const App = () => {
   return (
     <div className="App">
-      <NavBar />
+      {useLocation().pathname !== '/' && <NavBar />}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/mood-quiz" element={<MoodQuiz />} />
+        <Route path="/mood-quiz" element={<QuestionList />} />
         <Route path="/mood-choice/:mood" element={<MoodChoice />} />
         <Route path="/mood-selection" element={<MoodSelection />} />
         <Route path="/mood-result" element={<MoodResult />} />
@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/media-detail/:id" element={<MediaDetails />} />
       </Routes>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
