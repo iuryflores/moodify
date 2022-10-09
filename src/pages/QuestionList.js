@@ -56,7 +56,7 @@ export const QuestionList = () => {
           addedAnswerValue={addedAnswerValue}
         />
       ))}
-      <Link to={`/mood-choice/${moodType}`} key={moodType}>
+      <Link to={`/mood-result/${moodType}`} key={moodType}>
         Quiz Result!
       </Link>
     </div>

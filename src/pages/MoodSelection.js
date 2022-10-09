@@ -1,5 +1,6 @@
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { MoodList } from '../components/Shared'
 
 export const MoodSelection = () => {
   const [mood, setMood] = useState([
@@ -16,13 +17,15 @@ export const MoodSelection = () => {
   ])
 
   return (
-    <div>
-      <p>Mood Selection</p>
-      {mood.map((mood, index) => (
-        <Link to={`/mood-choice/${mood.type}`} key={index}>
-          {mood.type}
-        </Link>
-      ))}
-    </div>
+    <MoodList>
+      <div>
+        <p>Mood Selection</p>
+        {mood.map((mood, index) => (
+          <Link to={`/mood-choice/${mood.type}`} key={index}>
+            {mood.type}
+          </Link>
+        ))}
+      </div>
+    </MoodList>
   )
 }

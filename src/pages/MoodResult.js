@@ -1,5 +1,9 @@
 import React from 'react'
 
-export const MoodResult = () => {
-  return <div>MoodResult</div>
+export const MoodResult = ({ moodType }) => {
+  return (
+    <div>
+      <p>{moodType}</p>
+    </div>
+  )
 }
