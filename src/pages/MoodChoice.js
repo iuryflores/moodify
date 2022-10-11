@@ -28,6 +28,7 @@ export const MoodChoice = () => {
 
   return (
     <div>
+      <h1>teste</h1>
       <Link to={`/mood-enhancer/${mood}`}> please match my mood </Link>
       <Link to={`/mood-enhancer/${getRandomMood()}`}>
         please change my mood

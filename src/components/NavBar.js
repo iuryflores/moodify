@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Nav, Logo } from './Shared.js'
 
 export const NavBar = (props) => {
   return (
-    <div>
-      <img src="logo.png" alt="logo" />
+    <Nav>
+      <Logo>
+        <img src="logo.png" alt="" />
+      </Logo>
       <Link to="/"> Home </Link>
-    </div>
+    </Nav>
   )
 }
