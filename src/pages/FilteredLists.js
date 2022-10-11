@@ -30,7 +30,7 @@ export const FilteredLists = () => {
       setSongs(filteredSongsArray.slice(0, 3));
     };
     getSetMedia();
-  }, []);
+  }, [mood]);
   return (
     <div>
       {songs.map((song) => (
