@@ -1,8 +1,5 @@
 import { React, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { List, MoodList, MoodListAll } from '../components/Shared'
-import { MoodHappy } from '../subpages/MoodHappy'
-import happy from '../images/happy.png'
 
 export const MoodSelection = () => {
   const [mood, setMood] = useState([

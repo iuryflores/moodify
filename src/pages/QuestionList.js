@@ -1,9 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
-import { Link } from 'react-router-dom'
 import { LinkHome } from '../components/Shared'
-import { MoodSad } from '../subpages/MoodSad'
 
 export const QuestionList = () => {
   const [questions, setQuestions] = useState([])
