@@ -1,7 +1,8 @@
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { MoodList, MoodListAll } from '../components/Shared'
+import { List, MoodList, MoodListAll } from '../components/Shared'
 import { MoodHappy } from '../subpages/MoodHappy'
+import happy from '../images/happy.png'
 
 export const MoodSelection = () => {
   const [mood, setMood] = useState([
@@ -23,11 +24,13 @@ export const MoodSelection = () => {
         <p>Mood Selection</p>
       </MoodList>
       {mood.map((mood, index) => (
-        <li>
-          <MoodListAll to={`/mood-choice/${mood.type}`} key={index}>
-            {mood.type}
-          </MoodListAll>
-        </li>
+        <List>
+          <li>
+            <MoodListAll to={`/mood-choice/${mood.type}`} key={index}>
+              {mood.type}
+            </MoodListAll>
+          </li>
+        </List>
       ))}
     </div>
   )

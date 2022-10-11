@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
 import { Link } from 'react-router-dom'
+import { LinkHome } from '../components/Shared'
 import { MoodSad } from '../subpages/MoodSad'
 
 export const QuestionList = () => {
@@ -57,9 +58,9 @@ export const QuestionList = () => {
           addedAnswerValue={addedAnswerValue}
         />
       ))}
-      <Link to={`/mood-result/${moodType}`} key={moodType}>
+      <LinkHome to={`/mood-result/${moodType}`} key={moodType}>
         Quiz Result!
-      </Link>
+      </LinkHome>
     </div>
   )
 }
