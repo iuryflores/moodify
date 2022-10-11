@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { QuestionCard } from './QuestionCard'
+
 
 export const Nav = styled.nav`
   background-color: lightgray;

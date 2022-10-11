@@ -25,7 +25,7 @@ export const FilteredLists = () => {
 
   useEffect(() => {
     getSetMedia()
-  }, [])
+  }, [getSetMedia])
   return (
     <div>
       {songs.map((song) => (

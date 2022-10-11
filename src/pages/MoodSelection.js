@@ -2,7 +2,7 @@ import { React, useState } from 'react'
 import { List, MoodList, MoodListAll } from '../components/Shared'
 
 export const MoodSelection = () => {
-  const [mood, setMood] = useState([
+  const [mood] = useState([
     { type: 'Happy' },
     { type: 'Hopeful' },
     { type: 'Joyous' },
