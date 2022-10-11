@@ -6,8 +6,8 @@ import {
   MoodChoice,
   MoodSelection,
   MoodResult,
-  MoodEnhancer,
   MediaDetails,
+  FilteredLists,
 } from './pages'
 import { NavBar } from './components/NavBar'
 
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/mood-choice/:mood" element={<MoodChoice />} />
         <Route path="/mood-selection" element={<MoodSelection />} />
         <Route path="/mood-result/:mood" element={<MoodResult />} />
-        <Route path="/mood-enhancer" element={<MoodEnhancer />} />
+        <Route path="/mood-enhancer/:mood" element={<FilteredLists />} />
         <Route path="/media-detail/:id" element={<MediaDetails />} />
       </Routes>
     </div>
