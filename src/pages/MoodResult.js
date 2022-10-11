@@ -3,7 +3,7 @@ import React from 'react'
 export const MoodResult = ({ moodType }) => {
   return (
     <div>
-      <p>{moodType}</p>
+      <p>{`${moodType}`}</p>
     </div>
   )
 }

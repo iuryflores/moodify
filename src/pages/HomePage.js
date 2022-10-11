@@ -1,7 +1,7 @@
 import React from 'react'
 import Britney from '../images/BritneySpears.png'
 import { Link } from 'react-router-dom'
-import { HeadingHome, LinkHome, PHome } from '../components/Shared'
+import { Heading2, HeadingHome, LinkHome, PHome } from '../components/Shared'
 
 export const HomePage = () => {
   return (
@@ -14,7 +14,9 @@ export const HomePage = () => {
       </PHome>
       <img src={Britney} alt="David Bowie" />
       <div>
-        <h2> I want... </h2>
+        <Heading2>
+          <h2> I want... </h2>
+        </Heading2>
         <LinkHome to="/mood-selection"> to tell you how I feel </LinkHome>
         <LinkHome to="/mood-quiz"> for you to tell me how I feel </LinkHome>
       </div>

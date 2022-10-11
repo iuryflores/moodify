@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Nav, Logo } from './Shared.js'
+import { Nav, Logo, LinkHome } from './Shared.js'
 
 export const NavBar = (props) => {
   return (

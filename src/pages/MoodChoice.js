@@ -1,5 +1,6 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { HeadingHome, LinkHome } from '../components/Shared'
 
 export const MoodChoice = () => {
   const { mood } = useParams()
@@ -28,11 +29,14 @@ export const MoodChoice = () => {
 
   return (
     <div>
-      <h1>teste</h1>
-      <Link to={`/mood-enhancer/${mood}`}> please match my mood </Link>
-      <Link to={`/mood-enhancer/${getRandomMood()}`}>
+      <HeadingHome>
+        <h1>{`You are ${mood}`}</h1>
+      </HeadingHome>
+      <img src="" alt="mood" />
+      <LinkHome to={`/mood-enhancer/${mood}`}> please match my mood </LinkHome>
+      <LinkHome to={`/mood-enhancer/${getRandomMood()}`}>
         please change my mood
-      </Link>
+      </LinkHome>
     </div>
   )
 }

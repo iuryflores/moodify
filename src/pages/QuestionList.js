@@ -1,8 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
-import { Link } from 'react-router-dom'
-import { MoodSad } from '../subpages/MoodSad'
+import { LinkHome } from '../components/Shared'
 
 export const QuestionList = () => {
   const [questions, setQuestions] = useState([])
@@ -57,9 +56,9 @@ export const QuestionList = () => {
           addedAnswerValue={addedAnswerValue}
         />
       ))}
-      <Link to={`/mood-result/${moodType}`} key={moodType}>
+      <LinkHome to={`/mood-result/${moodType}`} key={moodType}>
         Quiz Result!
-      </Link>
+      </LinkHome>
     </div>
   )
 }
