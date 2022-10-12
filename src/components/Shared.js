@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { QuestionCard } from './QuestionCard'
 
 export const Nav = styled.nav`
   background-color: lightgray;
@@ -90,5 +89,4 @@ export const Button = styled.button`
   font-size: 16px;
   align-items: center;
   justify-content: center;
-  shadow: 2px;
 `
