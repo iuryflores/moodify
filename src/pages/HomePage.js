@@ -1,24 +1,25 @@
-import React from 'react'
-import Britney from '../images/BritneySpears.png'
-import { Heading2, HeadingHome, LinkHome, PHome } from '../components/Shared'
+import React from "react";
+import background from "../images/background.jpg";
+import { Heading2, Nav, LinkHome, PHome, DivButtons } from "../components/Shared";
+import imgLogo from "../images/logo.png";
 
 export const HomePage = () => {
   return (
     <div>
-      <HeadingHome>
-        <h1> Moodify </h1>
-      </HeadingHome>
+      <Nav>
+        <img src={imgLogo} alt="Moodify logo" height="40px" />
+      </Nav>
       <PHome>
-        <p>A curated library that matches or changes your mood</p>
+        A curated library that matches or changes your mood
       </PHome>
-      <img src={Britney} alt="David Bowie" />
-      <div>
-        <Heading2>
-          <h2> I want... </h2>
-        </Heading2>
+      <Heading2>
+         I want...
+      </Heading2>
+      <DivButtons>
         <LinkHome to="/mood-selection"> to tell you how I feel </LinkHome>
         <LinkHome to="/mood-quiz"> for you to tell me how I feel </LinkHome>
-      </div>
+      </DivButtons>
+      {/*<img src={background} alt="Background" width={"100%"} />*/}
     </div>
-  )
-}
+  );
+};
