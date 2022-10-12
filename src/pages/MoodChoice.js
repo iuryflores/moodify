@@ -30,9 +30,7 @@ export const MoodChoice = () => {
 
   return (
     <div>
-      <HeadingHome>
-        <h1>{`You are ${mood}`}</h1>
-      </HeadingHome>
+      <HeadingHome>{`You are ${mood}`}</HeadingHome>
       <img src={moodValue.image} alt="mood" />
       <LinkHome to={`/mood-enhancer/${mood}`}> please match my mood </LinkHome>
       <LinkHome to={`/mood-enhancer/${getRandomMood()}`}>
