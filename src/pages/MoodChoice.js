@@ -1,12 +1,13 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { HeadingHome, LinkHome } from '../components/Shared'
+import happy from '../images/happy.png'
 
 export const MoodChoice = () => {
   const { mood } = useParams()
 
   const moodValue = [
-    { type: 'Happy' },
+    { type: 'Happy', image: { happy } },
     { type: 'Hopeful' },
     { type: 'Joyous' },
     { type: 'Excited' },
@@ -32,7 +33,7 @@ export const MoodChoice = () => {
       <HeadingHome>
         <h1>{`You are ${mood}`}</h1>
       </HeadingHome>
-      <img src="" alt="mood" />
+      <img src={moodValue.image} alt="mood" />
       <LinkHome to={`/mood-enhancer/${mood}`}> please match my mood </LinkHome>
       <LinkHome to={`/mood-enhancer/${getRandomMood()}`}>
         please change my mood
