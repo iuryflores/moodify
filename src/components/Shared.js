@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
+=======
+
+>>>>>>> b7094379aafc5147ed4b283931110527a300c759
 
 export const Nav = styled.nav`
   background-color: lightgray;

@@ -1,6 +1,5 @@
 import React from 'react'
 import Britney from '../images/BritneySpears.png'
-import { Link } from 'react-router-dom'
 import { Heading2, HeadingHome, LinkHome, PHome } from '../components/Shared'
 
 export const HomePage = () => {

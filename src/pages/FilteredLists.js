@@ -7,32 +7,41 @@ export const FilteredLists = () => {
   const [movies, setMovies] = useState([])
   const { mood } = useParams()
 
-  const getSetMedia = async () => {
-    const { data } = await axios.get('https://ironrest.herokuapp.com/moodify')
-    const filteredMoviesArray = data
-      .filter((media) => {
-        return media.mood.includes(mood.toLowerCase()) && media.type === 'movie'
-      })
-      .sort(() => 0.5 - Math.random())
-    setMovies(filteredMoviesArray.slice(0, 3))
-    const filteredSongsArray = data
-      .filter((media) => {
-        return media.mood.includes(mood.toLowerCase()) && media.type === 'song'
-      })
-      .sort(() => 0.5 - Math.random())
-    setSongs(filteredSongsArray.slice(0, 3))
-  }
-
   useEffect(() => {
+    const getSetMedia = async () => {
+      const { data } = await axios.get('https://ironrest.herokuapp.com/moodify')
+      const filteredMoviesArray = data
+        .filter((media) => {
+          return (
+            media.mood.includes(mood.toLowerCase()) && media.type === 'movie'
+          )
+        })
+        .sort(() => 0.5 - Math.random())
+      setMovies(filteredMoviesArray.slice(0, 3))
+      const filteredSongsArray = data
+        .filter((media) => {
+          return (
+            media.mood.includes(mood.toLowerCase()) && media.type === 'song'
+          )
+        })
+        .sort(() => 0.5 - Math.random())
+      setSongs(filteredSongsArray.slice(0, 3))
+    }
     getSetMedia()
-  }, [])
+  }, [mood])
   return (
     <div>
       {songs.map((song) => (
-        <p>{song.title}</p>
+        <div>
+          <p>{song.title}</p>
+          <p>{song.description}</p>
+        </div>
       ))}
       {movies.map((movie) => (
-        <p>{movie.title}</p>
+        <div>
+          <p>{movie.title}</p>
+          <p>{movie.description}</p>
+        </div>
       ))}
     </div>
   )
