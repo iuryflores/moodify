@@ -1,27 +1,32 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-=======
-
->>>>>>> b7094379aafc5147ed4b283931110527a300c759
 
 export const Nav = styled.nav`
-  background-color: lightgray;
+  background-color: #f1f1f1;
   display: flex;
   align-items: center;
   height: 85px;
   margin: 5px;
-  border: 0.5px solid black;
-  font-family: georgia;
+  box-shadow: 0px 2px 2px #ccc;
+  font-family: "Montserrat";
   font-size: 20px;
   justify-content: center;
-`
-export const Logo = styled.h1`
-  background-color: lavender;
-  width: 60px;
-  height: 40px;
-  margin: 15px;
-`
+  list-style-type: none;
+`;
+export const Logo = styled.li`
+  width: 80%;
+`;
+export const HomeIcon = styled.li`
+  border-radius: 5px;
+  border: 2px solid transparent;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    border: 2px solid black;
+  }
+`;
+
 export const Card = styled.div`
   display: flex;
   text-decoration: none;
@@ -31,59 +36,89 @@ export const Card = styled.div`
   border: 2px dotted black;
   padding: 10px;
   margin: 10px;
-`
-export const MoodList = styled.p`
+`;
+export const MoodList = styled.div`
   display: flex;
-  color: gray;
-  font-size: 38px;
+  background-color: #142448;
+  font-family: "Montserrat";
+  color: white;
+  border-radius: 15px 15px 2px 2px;
+  font-size: 28px;
   justify-content: center;
-  margin: 15px;
-`
+  margin: 15px 0 0 0;
+  padding: 10px 0;
+`;
+export const FootMoodList = styled.div`
+  display: flex;
+  background-color: #142448;
+  font-family: "Montserrat";
+  color: #142448;
+  border-radius: 2px 2px 15px 15px;
+  font-size: 28px;
+  justify-content: center;
+  margin: 0 0 15px 0;
+  padding: 10px 0;
+`;
 export const LinkHome = styled(Link)`
   text-decoration: none;
-  font-family: georgia;
+  font-family: "Montserrat";
   display: flex;
-  color: gray;
-  font-size: 22px;
-  justifity-content: center;
+  background-color: #47225a;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
-  border: 1px solid gray;
+  padding: 10px 5px;
+  border: 1px solid #47225a;
   margin: 20px;
-`
+  transition: all 0.5s;
+  &:hover {
+    background-color: purple;
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 4px 2px #aaa;
+  }
+`;
 export const HeadingHome = styled.h1`
   background-color: teal;
   height: 130px;
-  font-family: georgia;
+  font-family: "Montserrat";
   font-size: 45px;
   color: purple;
-`
+`;
 export const PHome = styled.p`
-  font-family: times-new-roman;
+  font-family: "Montserrat";
   font-size: 22px;
-  color: gray;
-  padding: 10px;
-  margin: 5px;
-  border: 0.5px dashed gray;
-  border-width: 85px;
-`
+  color: purple;
+  padding: 30px;
+  margin: 20px 0;
+  border: 0.5px dashed #47225a;
+  border-width: 45px;
+`;
 export const MoodListAll = styled(Link)`
-  font-family: georgia;
+  font-family: "Montserrat";
   font-size: 34px;
-  color: lightpurple;
+  color: purple;
   text-decoration: none;
   padding: 10px;
   margin: 10px;
-`
+`;
 export const Heading2 = styled.h2`
-font-family: times-new-roman;
+font-family: 'Montserrat';
 font-size: 32px;
-color: gray;
-padding: 10px:
-`
-export const List = styled.li`
+color: purple;
+padding: 20px:
+`;
+export const List = styled.div`
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
   padding: 10px;
-`
+`;
 export const Button = styled.button`
   background-color: lavender;
   padding: 15px;
@@ -93,4 +128,9 @@ export const Button = styled.button`
   font-size: 16px;
   align-items: center;
   justify-content: center;
-`
+  shadow: 2px;
+`;
+export const DivButtons = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
