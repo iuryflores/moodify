@@ -8,6 +8,7 @@ import {
 
 export const MoodSelection = () => {
   const [mood] = useState([
+
     { type: "Happy" },
     { type: "Hopeful" },
     { type: "Joyous" },

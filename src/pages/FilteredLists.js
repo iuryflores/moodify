@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 export const FilteredLists = () => {
+
   const [songs, setSongs] = useState([]);
   const [movies, setMovies] = useState([]);
   const { mood } = useParams();
@@ -31,13 +32,20 @@ export const FilteredLists = () => {
     };
     getSetMedia();
   }, [mood]);
+
   return (
     <div>
       {songs.map((song) => (
-        <p>{song.title}</p>
+        <div>
+          <p>{song.title}</p>
+          <p>{song.description}</p>
+        </div>
       ))}
       {movies.map((movie) => (
-        <p>{movie.title}</p>
+        <div>
+          <p>{movie.title}</p>
+          <p>{movie.description}</p>
+        </div>
       ))}
     </div>
   );
