@@ -1,13 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
-import { LinkHome } from '../components/Shared'
+import { Button, LinkHome } from '../components/Shared'
 
 export const QuestionList = () => {
   const [questions, setQuestions] = useState([])
   let [getValue, setGetValue] = useState(0)
 
   const getQuestions = async () => {
+    // let currentQuestion = questions.shift()
     const { data } = await axios.get(
       'https://ironrest.herokuapp.com/MoodifyQuestions'
     )
@@ -49,13 +50,16 @@ export const QuestionList = () => {
 
   return (
     <div>
-      {questions.map((question) => (
-        <QuestionCard
-          key={question._id}
-          {...question}
-          addedAnswerValue={addedAnswerValue}
-        />
-      ))}
+      {questions
+        .map((question) => (
+          <QuestionCard
+            key={question._id}
+            {...question}
+            addedAnswerValue={addedAnswerValue}
+          />
+        ))
+        .shift()}
+      <Button> Next Question </Button>
       <LinkHome to={`/mood-result/${moodType}`} key={moodType}>
         Quiz Result!
       </LinkHome>
