@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/mood-selection" element={<MoodSelection />} />
         <Route path="/mood-result/:mood" element={<MoodResult />} />
         <Route path="/mood-enhancer/:mood" element={<FilteredLists />} />
-        <Route path="/media-detail/:id" element={<MediaDetails />} />
+        <Route path="/media-detail/:_id" element={<MediaDetails />} />
       </Routes>
     </div>
   )

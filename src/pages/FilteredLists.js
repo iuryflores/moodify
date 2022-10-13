@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { Heading2, LinkHome, PHome } from '../components/Shared'
 
 export const FilteredLists = () => {
   const [songs, setSongs] = useState([])
@@ -32,10 +33,18 @@ export const FilteredLists = () => {
   return (
     <div>
       {songs.map((song) => (
-        <p>{song.title}</p>
+        <div>
+          <LinkHome to={`/media-details/${song._id}`}>{song.title}</LinkHome>
+          <Heading2>{song.description}</Heading2>
+          {/* <img src={song.image} alt="song" /> */}
+        </div>
       ))}
       {movies.map((movie) => (
-        <p>{movie.title}</p>
+        <div>
+          <LinkHome to={`/media-details/${movie._id}`}>{movie.title}</LinkHome>
+          <Heading2>{movie.creator}</Heading2>
+          {/* <img src={movie.image} alt="movie" /> */}
+        </div>
       ))}
     </div>
   )
