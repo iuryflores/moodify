@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
-import { Heading2, LinkHome, PHome } from '../components/Shared'
+import { useParams } from 'react-router-dom'
+import { Heading2, LinkHome } from '../components/Shared'
 
 export const FilteredLists = () => {
   const [songs, setSongs] = useState([])
@@ -34,14 +34,18 @@ export const FilteredLists = () => {
     <div>
       {songs.map((song) => (
         <div>
-          <LinkHome to={`/media-details/${song._id}`}>{song.title}</LinkHome>
+          <LinkHome to={`/media-details/${song._id}`} key={song._id}>
+            {song.title}
+          </LinkHome>
           <Heading2>{song.description}</Heading2>
           {/* <img src={song.image} alt="song" /> */}
         </div>
       ))}
       {movies.map((movie) => (
         <div>
-          <LinkHome to={`/media-details/${movie._id}`}>{movie.title}</LinkHome>
+          <LinkHome to={`/media-details/${movie._id}`} key={movie._id}>
+            {movie.title}
+          </LinkHome>
           <Heading2>{movie.creator}</Heading2>
           {/* <img src={movie.image} alt="movie" /> */}
         </div>

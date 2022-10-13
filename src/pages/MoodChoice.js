@@ -37,45 +37,46 @@ export const MoodChoice = () => {
     }
   }
 
-  // const moodShowing = (mood) => {
-  //   if (mood === angry) {
-  //     console.log('You are angry.')
-  //     ;<img src="angry" alt="angry" />
-  //   } else if (mood === bored) {
-  //     console.log('You are bored.')
-  //     ;<img src="bored" alt="bored" />
-  //   } else if (mood === excited) {
-  //     console.log('You are excited!')
-  //     ;<img src="excited" alt="excited" />
-  //   } else if (mood === happy) {
-  //     console.log('You are happy!!')
-  //     ;<img src="happy" alt="happy" />
-  //   } else if (mood === hopeful) {
-  //     console.log('You are feeling hopeful!')
-  //     ;<img src="hopeful" alt="hopeful" />
-  //   } else if (mood === hopeless) {
-  //     console.log('You are feeling hopeless..')
-  //     ;<img src="hopeless" alt="hopeless" />
-  //   } else if (mood === joyous) {
-  //     console.log('You are joyous!')
-  //     ;<img src="joyous" alt="joyous" />
-  //   } else if (mood === melancholic) {
-  //     console.log('You are melancholic.')
-  //     ;<img src="melancholic" alt="melancholic" />
-  //   } else if (mood === peaceful) {
-  //     console.log('You are peaceful.')
-  //     ;<img src="peaceful" alt="peaceful" />
-  //   } else if (mood === sad) {
-  //     console.log('You are sad...')
-  //     ;<img src="sad" alt="sad" />
-  //   }
-  //   return
-  // }
+  const moodShowing = () => {
+    const showMood = ''
+    if (mood === angry) {
+      console.log('You are angry.')
+      ;<img src="angry" alt="angry" />
+    } else if (mood === bored) {
+      console.log('You are bored.')
+      ;<img src="bored" alt="bored" />
+    } else if (mood === excited) {
+      console.log('You are excited!')
+      ;<img src="excited" alt="excited" />
+    } else if (mood === happy) {
+      console.log('You are happy!!')
+      ;<img src="happy" alt="happy" />
+    } else if (mood === hopeful) {
+      console.log('You are feeling hopeful!')
+      ;<img src="hopeful" alt="hopeful" />
+    } else if (mood === hopeless) {
+      console.log('You are feeling hopeless..')
+      ;<img src="hopeless" alt="hopeless" />
+    } else if (mood === joyous) {
+      console.log('You are joyous!')
+      ;<img src="joyous" alt="joyous" />
+    } else if (mood === melancholic) {
+      console.log('You are melancholic.')
+      ;<img src="melancholic" alt="melancholic" />
+    } else if (mood === peaceful) {
+      console.log('You are peaceful.')
+      ;<img src="peaceful" alt="peaceful" />
+    } else if (mood === sad) {
+      console.log('You are sad...')
+      ;<img src="sad" alt="sad" />
+    }
+    return showMood
+  }
 
   return (
     <div>
       <HeadingHome>{`You are ${mood}.`}</HeadingHome>
-      {/* <img src={moodValue.image} alt="mood" /> */}
+      <img src={moodShowing(mood)} alt="mood" />
       <LinkHome to={`/mood-enhancer/${mood}`}> please match my mood </LinkHome>
       <LinkHome to={`/mood-enhancer/${getRandomMood()}`}>
         please change my mood
