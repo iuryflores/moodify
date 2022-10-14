@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
-import { Button, LinkHome } from '../components/Shared'
+import { Button } from '../components/Shared'
 import { useNavigate } from 'react-router-dom'
 
 export const QuestionList = () => {
