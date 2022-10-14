@@ -7,13 +7,14 @@ export const MediaDetails = () => {
   const [media, setMedia] = useState({});
   const { _id } = useParams();
 
-  const getMediaDetails = async () => {
-    const result = await axios.get(`https://ironrest.herokuapp.com/moodify/${_id}`);
-    const data = result.data;
-    setMedia(data);
-  };
-
   useEffect(() => {
+    const getMediaDetails = async () => {
+      const result = await axios.get(
+        `https://ironrest.herokuapp.com/moodify/${_id}`
+      );
+      const data = result.data;
+      setMedia(data);
+    };
     getMediaDetails(_id);
   }, [_id]);
 

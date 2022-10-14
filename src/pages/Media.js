@@ -6,7 +6,7 @@ const Media = ({ title, description, image, creator, year, link }) => {
     <div>
       <Heading2>{`${title}`}</Heading2>
       <PHome>{`${description}`}</PHome>
-      <img src={`${image}`} alt="Media image" />
+      <img src={`${image}`} alt={title} />
 
       <p>{`${year}`}</p>
       <p>{`${creator}`}</p>
