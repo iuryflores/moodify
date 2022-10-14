@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+MOODIFY 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Moodify it's here to modify your mood, hence why we called it that. Through media, we hope to perk you up or help you cry, whichever you might need. 
+ 
+Our inspiration to create this App was the fact that we like to send stuff to our friends when they're... well, whatever they may be. If they're sad, we want to help them through and if they're anything else, say happy, we want to support them and make that last as long as they have it in them. 
 
-## Available Scripts
+Think of Moodify as one step up from mixtapes and playlists, because Moodify lets you decide what you want. 
 
-In the project directory, you can run:
+---HOW IT WORKS---
 
-### `npm start`
+You can tell us how you feel, or you can answer a short quiz (ten questions) and we'll gauge your mood for you. After you've selected either option, you'll be asked if you want to change your current mood or have it matched. If you want to keep feeling what it is you are feeling, choose the option for the App to match your mood. If you want to feel something else - and who here has never wanted to feel something else - you can ask the App to change your mood. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once that selection has been made, you will see a list of three songs and a few movies too (usually three as well). At first you will see the song title and who is best known for it (considering composers, covers, etc.). With songs/pieces of music you will also see a short description. This description is meant to be something between cheeky and poetic. With movies, you will see the title and the creator/director. If anything catches your eye from this list, simply click on your favorite medium and you will be taken to a page with more details about this medium. There you'll have an image as well as a link to the real deal outside our App. Go and enjoy it! :) 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+We truly hope that we may be an invisible friend if you find yourself wanting the soothing graces of what seems to be the most consumed art forms these days: music and movies. We hope that we may help you or just entertain you - whichever. 
 
-### `npm test`
+Please feel free to let us know if you like the App, or if you don't. If you don't, please include why you don't - we just want to know so we can keep on improving it. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Thank you for reading this. Have fun! :) 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Anneliese Kappey and Iury Flores 
