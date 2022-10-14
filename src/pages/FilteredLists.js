@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
-import { Heading2, LinkHome, PHome } from '../components/Shared'
+import { useParams } from 'react-router-dom'
+import { Heading2, Icon, MediaCard, MediaList } from '../components/Shared'
+import songImg from '../images/song.png'
+import MovieImg from '../images/movie.png'
 
 export const FilteredLists = () => {
   const [songs, setSongs] = useState([])
@@ -30,22 +32,24 @@ export const FilteredLists = () => {
     }
     getSetMedia()
   }, [mood])
+
   return (
-    <div>
+    <MediaList>
       {songs.map((song) => (
-        <div>
-          <LinkHome to={`/media-details/${song._id}`}>{song.title}</LinkHome>
+        <MediaCard to={`/media-details/${song._id}`} key={song._id}>
+          <Icon src={songImg} alt="Song icon" />
+          {song.title}
+          <Heading2>{song.creator}</Heading2>
           <Heading2>{song.description}</Heading2>
-          {/* <img src={song.image} alt="song" /> */}
-        </div>
+        </MediaCard>
       ))}
       {movies.map((movie) => (
-        <div>
-          <LinkHome to={`/media-details/${movie._id}`}>{movie.title}</LinkHome>
+        <MediaCard to={`/media-details/${movie._id}`} key={movie._id}>
+          <Icon src={MovieImg} alt="Song icon" />
+          {movie.title}
           <Heading2>{movie.creator}</Heading2>
-          {/* <img src={movie.image} alt="movie" /> */}
-        </div>
+        </MediaCard>
       ))}
-    </div>
+    </MediaList>
   )
 }

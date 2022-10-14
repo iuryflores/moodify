@@ -45,9 +45,33 @@ export const MoodList = styled.div`
   border-radius: 15px 15px 2px 2px;
   font-size: 28px;
   justify-content: center;
-  margin: 15px 0 0 0;
+  margin: 15px 10px 0 10px;
   padding: 10px 0;
-`
+`;
+export const List = styled.div`
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 10px;
+`;
+export const MoodListAll = styled(Link)`
+  width: 25%;
+  font-family: "Montserrat";
+  font-size: 34px;
+  color: purple;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+
+  transition: all 1s;
+  &:hover {
+    background-color: #47225a;
+    color: white;
+    border-radius: 10px;
+  }
+`;
 export const FootMoodList = styled.div`
   display: flex;
   background-color: #142448;
@@ -56,9 +80,22 @@ export const FootMoodList = styled.div`
   border-radius: 2px 2px 15px 15px;
   font-size: 28px;
   justify-content: center;
-  margin: 0 0 15px 0;
+  margin: 0 10px 15px 10px;
   padding: 10px 0;
-`
+`;
+export const MediaList = styled.div`
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+`;
+export const MediaCard = styled(Link)`
+  width: 90%;
+  border: 2px solid red;
+`;
+export const Icon = styled.img`
+  width: 50px;
+`;
 export const LinkHome = styled(Link)`
   text-decoration: none;
   font-family: 'Montserrat';
@@ -96,29 +133,15 @@ export const PHome = styled.p`
   margin: 20px 0;
   border: 0.5px dashed #47225a;
   border-width: 45px;
-`
-export const MoodListAll = styled(Link)`
-  font-family: 'Montserrat';
-  font-size: 34px;
-  color: purple;
-  text-decoration: none;
-  padding: 10px;
-  margin: 10px;
-`
+`;
+
 export const Heading2 = styled.h2`
 font-family: 'Montserrat';
 font-size: 32px;
 color: purple;
 padding: 20px:
-`
-export const List = styled.div`
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: row;
-  padding: 10px;
-`
+`;
+
 export const Button = styled.button`
   background-color: lavender;
   padding: 15px;
@@ -129,8 +152,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   box-shadow: 2px;
-`
-
+`;
 export const DivButtons = styled.div`
   display: flex;
   justify-content: space-around;

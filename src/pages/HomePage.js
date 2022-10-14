@@ -1,5 +1,5 @@
 import React from "react";
-import background from "../images/background.jpg";
+/*import background from "../images/background.jpg";*/
 import { Heading2, Nav, LinkHome, PHome, DivButtons } from "../components/Shared";
 import imgLogo from "../images/logo.png";
 
