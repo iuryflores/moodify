@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { FilteredLists } from './FilteredLists'
-import { useNavigate, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import Media from "./Media";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 export const MediaDetails = () => {
-  const [media, setMedia] = useState({})
-  const { _id } = useParams()
+  const [media, setMedia] = useState({});
+  const { _id } = useParams();
 
-  const navigate = useNavigate()
+  const getMediaDetails = async () => {
+    const result = await axios.get(`https://ironrest.herokuapp.com/moodify/${_id}`);
+    const data = result.data;
+    setMedia(data);
+  };
 
   useEffect(() => {
-    setMedia(_id)
-      .then((result) => setMedia(result))
-      .catch(() => navigate('/'))
-  }, [])
+    getMediaDetails(_id);
+  }, [_id]);
 
   return (
-    <>
-      <FilteredLists {...media} />
-    </>
-  )
-}
+    <div>
+      <Media {...media} />
+    </div>
+  );
+};
