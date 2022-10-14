@@ -64,13 +64,12 @@ export const MoodListAll = styled(Link)`
   text-decoration: none;
   padding: 10px;
   margin: 10px;
-  
+
   transition: all 1s;
   &:hover {
     background-color: #47225a;
     color: white;
     border-radius: 10px;
-    
   }
 `;
 export const FootMoodList = styled.div`
@@ -83,6 +82,19 @@ export const FootMoodList = styled.div`
   justify-content: center;
   margin: 0 10px 15px 10px;
   padding: 10px 0;
+`;
+export const MediaList = styled.div`
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+`;
+export const MediaCard = styled(Link)`
+  width: 90%;
+  border: 2px solid red;
+`;
+export const Icon = styled.img`
+  width: 50px;
 `;
 export const LinkHome = styled(Link)`
   text-decoration: none;
