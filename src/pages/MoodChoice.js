@@ -5,7 +5,6 @@ import {
   LinkHome,
   DivButtons,
   MoodList,
-  DivCenter,
   FootMoodList,
 } from "../components/Shared";
 import happy from "../images/happy.png";
@@ -88,16 +87,13 @@ export const MoodChoice = () => {
         <img src={srcImg} alt="mood" style={{ width: "80px" }} />
         <span>{mood}</span>
       </MoodTitle>
-     
-        <DivButtons>
-          <LinkHome to={`/mood-enhancer/${mood}`}>
-            please match my mood
-          </LinkHome>
-          <LinkHome to={`/mood-enhancer/${getRandomMood()}`}>
-            please change my mood
-          </LinkHome>
-        </DivButtons>
-        <FootMoodList>-</FootMoodList>
+      <DivButtons>
+        <LinkHome to={`/mood-enhancer/${mood}`}>please match my mood</LinkHome>
+        <LinkHome to={`/mood-enhancer/${getRandomMood()}`}>
+          please change my mood
+        </LinkHome>
+      </DivButtons>
+      <FootMoodList>-</FootMoodList>
     </div>
   );
 };

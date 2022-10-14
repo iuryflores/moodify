@@ -126,10 +126,9 @@ export const HeadingHome = styled.h1`
   color: purple;
 `;
 export const MoodTitle = styled.div`
- 
   display: flex;
-  flex-direction:column;
-  align-items:center;
+  flex-direction: column;
+  align-items: center;
   padding: 10px 0;
   font-family: "Montserrat";
   font-size: 45px;
@@ -167,4 +166,3 @@ export const DivButtons = styled.div`
   display: flex;
   justify-content: space-around;
 `;
-export const DivCenter = styled.div`display:flex; flex-direction:column`
