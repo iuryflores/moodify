@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Nav = styled.nav `
+export const Nav = styled.nav`
   background-color: #f1f1f1;
   display: flex;
   align-items: center;
@@ -13,10 +13,10 @@ export const Nav = styled.nav `
   justify-content: center;
   list-style-type: none;
 `;
-export const Logo = styled.li `
+export const Logo = styled.li`
   width: 80%;
 `;
-export const HomeIcon = styled.li `
+export const HomeIcon = styled.li`
   border-radius: 5px;
   border: 2px solid transparent;
   padding: 5px;
@@ -27,7 +27,7 @@ export const HomeIcon = styled.li `
   }
 `;
 
-export const Card = styled.div `
+export const Card = styled.div`
   display: flex;
   text-decoration: none;
   color: black;
@@ -37,7 +37,7 @@ export const Card = styled.div `
   padding: 10px;
   margin: 10px;
 `;
-export const MoodList = styled.div `
+export const MoodList = styled.div`
   display: flex;
   background-color: #142448;
   font-family: "Montserrat";
@@ -48,7 +48,7 @@ export const MoodList = styled.div `
   margin: 15px 10px 0 10px;
   padding: 10px 0;
 `;
-export const List = styled.div `
+export const List = styled.div`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -56,8 +56,7 @@ export const List = styled.div `
   flex-direction: row;
   padding: 10px;
 `;
-export const MoodListAll = styled(Link)
-`
+export const MoodListAll = styled(Link)`
   width: 25%;
   font-family: "Montserrat";
   font-size: 34px;
@@ -73,7 +72,7 @@ export const MoodListAll = styled(Link)
     border-radius: 10px;
   }
 `;
-export const FootMoodList = styled.div `
+export const FootMoodList = styled.div`
   display: flex;
   background-color: #142448;
   font-family: "Montserrat";
@@ -84,29 +83,33 @@ export const FootMoodList = styled.div `
   margin: 0 10px 15px 10px;
   padding: 10px 0;
 `;
-export const MediaList = styled.div `
-   padding: 20px;
+export const MediaList = styled.div`
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
- 
 `;
-export const MediaCard = styled(Link)
-` text-decoration:none;
+export const MediaCard = styled(Link)`
+  text-decoration: none;
   width: 80%;
-  padding:10px;
-  display:flex;
-  align-items:center;
-  background-color:#f1f1f1;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
   margin: 5px 0;
- 
+  border: 2px solid transparent;
+  transition: all 1s;
+  &:hover{
+    border:2px solid #47225a;
+    color:white;
+    transform: scale(1.1,1.1)
+  }
 `;
-export const Icon = styled.img `
+export const Icon = styled.img`
   width: 50px;
-  padding: 30px
+  padding: 30px;
 `;
-export const LinkHome = styled(Link)
-`
+export const LinkHome = styled(Link)`
   text-decoration: none;
   font-family: "Montserrat";
   display: flex;
@@ -128,30 +131,29 @@ export const LinkHome = styled(Link)
     box-shadow: 0px 4px 2px #aaa;
   }
 `;
-export const HeadingHome = styled.h1 `
+export const HeadingHome = styled.h1`
   background-color: teal;
   height: 130px;
   font-family: "Montserrat";
   font-size: 45px;
   color: purple;
 `;
-export const TitleMedia = styled.span `
-
-`
-export const CreatorMedia = styled.span `
-
-`
-export const DescMedia = styled.span `
-text-align:left;
-`
-export const MediaDetails = styled.div `
-font-family: "Montserrat";
-color: purple;
-font-size: 19px;
-display: flex;
-flex-direction: column;
-align-items:flex-start`
-export const MoodTitle = styled.div `
+export const TitleMedia = styled.span`
+`;
+export const CreatorMedia = styled.span``;
+export const DescMedia = styled.span`
+  text-align: left;
+`;
+export const MediaDetails = styled.div`
+  font-family: "Montserrat";
+  color: purple;
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+`;
+export const MoodTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,7 +162,7 @@ export const MoodTitle = styled.div `
   font-size: 45px;
   color: purple;
 `;
-export const PHome = styled.p `
+export const PHome = styled.p`
   font-family: "Montserrat";
   font-size: 22px;
   color: purple;
@@ -170,14 +172,14 @@ export const PHome = styled.p `
   border-width: 45px;
 `;
 
-export const Heading2 = styled.h2 `
+export const Heading2 = styled.h2`
 font-family: 'Montserrat';
 font-size: 32px;
 color: purple;
 padding: 20px:
 `;
 
-export const Button = styled.button `
+export const Button = styled.button`
   background-color: lavender;
   padding: 15px;
   margin: 10px;
@@ -188,7 +190,7 @@ export const Button = styled.button `
   justify-content: center;
   box-shadow: 2px;
 `;
-export const DivButtons = styled.div `
+export const DivButtons = styled.div`
   display: flex;
   justify-content: space-around;
 `;

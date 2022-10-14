@@ -12,6 +12,7 @@ import {
 } from "../components/Shared";
 import songImg from "../images/song.png";
 import MovieImg from "../images/movie.png";
+import ArrowIcon from '../images/arrow.png'
 
 export const FilteredLists = () => {
   const [songs, setSongs] = useState([]);
@@ -53,12 +54,13 @@ export const FilteredLists = () => {
               Title: <strong>{song.title}</strong>
             </TitleMedia>
             <CreatorMedia>
-              Creator: <strong>{song.creator}</strong>
+              Artist: <strong>{song.creator}</strong>
             </CreatorMedia>
             <DescMedia>
               Description: <strong>{song.description}</strong>
             </DescMedia>
           </MediaDetails>
+          <Icon src={ArrowIcon} alt="Arrow" />
         </MediaCard>
       ))}
       {movies.map((movie) => (
@@ -69,9 +71,13 @@ export const FilteredLists = () => {
               Title: <strong>{movie.title}</strong>
             </TitleMedia>
             <CreatorMedia>
-              Creator: <strong>{movie.creator}</strong>
+            Director: <strong>{movie.creator}</strong>
             </CreatorMedia>
+            <DescMedia>
+              Year: <strong>{movie.year}</strong>
+            </DescMedia>
           </MediaDetails>
+          <Icon src={ArrowIcon} alt="Arrow" />
         </MediaCard>
       ))}
     </MediaList>
