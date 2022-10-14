@@ -84,14 +84,19 @@ export const FootMoodList = styled.div`
   padding: 10px 0;
 `;
 export const MediaList = styled.div`
-  width: 95%;
+   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 export const MediaCard = styled(Link)`
-  width: 90%;
-  border: 2px solid red;
+  min-width: 100%;
+  padding:10px;
+  display:flex;
+  align-items:center;
+  background-color:#f1f1f1;
+  margin: 5px 0;
+ 
 `;
 export const Icon = styled.img`
   width: 50px;
