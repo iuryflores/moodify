@@ -1,6 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { HeadingHome, LinkHome } from "../components/Shared";
+import {
+  MoodTitle,
+  LinkHome,
+  DivButtons,
+  MoodList,
+  DivCenter,
+  FootMoodList,
+} from "../components/Shared";
 import happy from "../images/happy.png";
 import angry from "../images/angry.png";
 import bored from "../images/bored.png";
@@ -76,12 +83,21 @@ export const MoodChoice = () => {
 
   return (
     <div>
-      <HeadingHome>{`You are ${mood}.`}</HeadingHome>
-      <img src={srcImg} alt="mood" style={{ width: "80px" }} />
-      <LinkHome to={`/mood-enhancer/${mood}`}> please match my mood </LinkHome>
-      <LinkHome to={`/mood-enhancer/${getRandomMood()}`}>
-        please change my mood
-      </LinkHome>
+      <MoodList>You are...</MoodList>
+      <MoodTitle>
+        <img src={srcImg} alt="mood" style={{ width: "80px" }} />
+        <span>{mood}</span>
+      </MoodTitle>
+     
+        <DivButtons>
+          <LinkHome to={`/mood-enhancer/${mood}`}>
+            please match my mood
+          </LinkHome>
+          <LinkHome to={`/mood-enhancer/${getRandomMood()}`}>
+            please change my mood
+          </LinkHome>
+        </DivButtons>
+        <FootMoodList>-</FootMoodList>
     </div>
   );
 };
