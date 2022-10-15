@@ -23,7 +23,7 @@ const Media = ({ title, description, image, type, creator, year, link }) => {
   return (
     <MediaDetailCard>
       <ImgMedia>
-        <img src={`${image}`} alt={title} />
+        <img src={`${image}`} alt={title} width='250px;' />
       </ImgMedia>
       <MediaDetails>
         <TitleMedia>
