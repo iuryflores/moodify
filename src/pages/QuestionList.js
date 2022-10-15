@@ -27,10 +27,10 @@ export const QuestionList = () => {
 
   const navigate = useNavigate();
 
-  const [isActive, setIsActive] = useState(false);
+  const [activeAnswer, setActiveAnswer] = useState(null);
 
   const handleClick = () => {
-    setIsActive(false);
+    setActiveAnswer(null);
 
     if (currentQuestion === questions.length - 1) {
       let moodType;
@@ -65,8 +65,8 @@ export const QuestionList = () => {
     <Questions>
       {questions.length && currentQuestion <= questions.length - 1 && (
         <QuestionCard
-          isActive={isActive}
-          setIsActive={setIsActive}
+          activeAnswer={activeAnswer}
+          setActiveAnswer={setActiveAnswer}
           {...questions[currentQuestion]}
           addedAnswerValue={addedAnswerValue}
         />
