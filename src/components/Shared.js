@@ -84,22 +84,30 @@ export const FootMoodList = styled.div`
   padding: 10px 0;
 `;
 export const MediaList = styled.div`
-   padding: 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 export const MediaCard = styled(Link)`
-  min-width: 100%;
-  padding:10px;
-  display:flex;
-  align-items:center;
-  background-color:#f1f1f1;
+  text-decoration: none;
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
   margin: 5px 0;
- 
+  border: 2px solid transparent;
+  transition: all 1s;
+  &:hover{
+    border:2px solid #47225a;
+    color:white;
+    transform: scale(1.1,1.1)
+  }
 `;
 export const Icon = styled.img`
   width: 50px;
+  padding: 30px;
 `;
 export const LinkHome = styled(Link)`
   text-decoration: none;
@@ -129,6 +137,21 @@ export const HeadingHome = styled.h1`
   font-family: "Montserrat";
   font-size: 45px;
   color: purple;
+`;
+export const TitleMedia = styled.span`
+`;
+export const CreatorMedia = styled.span``;
+export const DescMedia = styled.span`
+  text-align: left;
+`;
+export const MediaDetails = styled.div`
+  font-family: "Montserrat";
+  color: purple;
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 `;
 export const MoodTitle = styled.div`
   display: flex;
