@@ -109,6 +109,23 @@ export const Icon = styled.img`
   width: 50px;
   padding: 30px;
 `;
+export const MediaDetailCard = styled.div`
+padding:20px;
+margin:20px;
+background-color:#f1f1f1;
+font-size: 20px;
+display:flex;
+border-radius:10px;
+box-shadow: 2px 2px 2px lightgrey;
+align-items:center;
+`
+export const ImgMedia = styled.div`
+align-items:center;
+display:flex;
+border-radius:10px;
+background:red;
+margin: 0 15px 0 0;
+`
 export const LinkHome = styled(Link)`
   text-decoration: none;
   font-family: "Montserrat";
