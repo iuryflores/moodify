@@ -29,11 +29,15 @@ export const HomeIcon = styled.li`
 
 export const Card = styled.div`
   display: flex;
+  
+  align-items:center;
+  flex-direction: column;
   text-decoration: none;
   color: black;
   justify-content: center;
-  width: 400px;
-  border: 2px dotted black;
+  border-radius: 5px;
+  background-color:#fafafa;
+  box-shadow: 2px 2px 2px #f1f1f1;
   padding: 10px;
   margin: 10px;
 `;
@@ -53,8 +57,11 @@ export const List = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: column;
   padding: 10px;
+  align-items: center;
+    
+    
 `;
 export const MoodListAll = styled(Link)`
   width: 25%;
@@ -95,7 +102,7 @@ export const MediaCard = styled(Link)`
   padding: 10px;
   display: flex;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: #fafafa;
   margin: 5px 0;
   border: 2px solid transparent;
   transition: all 1s;
@@ -165,6 +172,7 @@ export const LinkMedia = styled.a`
   border: 1px solid #47225a;
   margin: 20px;
   transition: all 0.5s;
+  pointer:cursor;
   &:hover {
     background-color: purple;
     transform: scale(1.1, 1.1);
@@ -223,13 +231,33 @@ export const Button = styled.button`
   background-color: lavender;
   padding: 15px;
   margin: 10px;
-  color: gray;
-  font-family: arial;
+  color: #47225a;
+  font-family: 'Montserrat';
   font-size: 16px;
   align-items: center;
   justify-content: center;
   box-shadow: 2px;
+
 `;
+export const ButtonAnswer = styled.button`
+  background-color: lavender;
+  padding: 15px;
+  margin: 10px;
+  color: #47225a;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+`;
+export const Questions = styled.div`
+display:flex;
+
+flex-direction: column;
+align-items:center;
+
+`
 export const DivButtons = styled.div`
   display: flex;
   justify-content: space-around;

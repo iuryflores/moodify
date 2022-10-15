@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
-import { Button } from '../components/Shared'
+import { Button , Questions} from '../components/Shared'
 import { useNavigate } from 'react-router-dom'
 
 export const QuestionList = () => {
@@ -58,7 +58,7 @@ export const QuestionList = () => {
   }
 
   return (
-    <div>
+    <Questions>
       {questions.length && currentQuestion <= questions.length - 1 && (
         <QuestionCard
           {...questions[currentQuestion]}
@@ -70,7 +70,7 @@ export const QuestionList = () => {
           ? 'Show Result'
           : 'Next Question'}
       </Button>
-    </div>
+    </Questions>
   )
 }
 
