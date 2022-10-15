@@ -149,6 +149,28 @@ export const LinkHome = styled(Link)`
     box-shadow: 0px 4px 2px #aaa;
   }
 `;
+export const LinkMedia = styled.a`
+  text-decoration: none;
+  font-family: "Montserrat";
+  display: flex;
+  background-color: #47225a;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 10px 5px;
+  border: 1px solid #47225a;
+  margin: 20px;
+  transition: all 0.5s;
+  &:hover {
+    background-color: purple;
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 4px 2px #aaa;
+  }
+`;
 export const HeadingHome = styled.h1`
   background-color: teal;
   height: 130px;

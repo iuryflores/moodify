@@ -5,7 +5,7 @@ import {
   ImgMedia,
   TitleMedia,
   CreatorMedia,
-  DescMedia,LinkHome
+  DescMedia,LinkMedia
 } from "../components/Shared";
 import PlayIcon from "../images/play.png";
 
@@ -42,14 +42,14 @@ const Media = ({ title, description, image, type, creator, year, link }) => {
           Description: <strong style={{fontSize: `${movieText}`}}>{description}</strong>
         </DescMedia>
 
-        <LinkHome href={`${link}`} style={{ display: "flex", width: 'fit-content', padding: '5px 15px', alignItems: "center", marginTop: "20px" }} target={'_blank'}>
+        <LinkMedia href={link} style={{ display: "flex", width: 'fit-content', padding: '5px 15px', alignItems: "center", marginTop: "20px" }} target={'_blank'}>
           <img
             src={PlayIcon}
             alt="Play"
             style={{ width: "60px", marginRight: "15px", filter: 'invert(1)' }}
           />
           Click here and {typeText}
-        </LinkHome>
+        </LinkMedia>
       </MediaDetails>
     </MediaDetailCard>
   );
