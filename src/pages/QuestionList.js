@@ -8,10 +8,10 @@ export const QuestionList = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   let [getValue, setGetValue] = useState(0);
-
+console.log(questions)
   const getQuestions = async () => {
     const { data } = await axios.get(
-      "https://ironrest.herokuapp.com/MoodifyQuestions"
+      "https://misty-plum-crab.cyclic.app/question/"
     );
     setQuestions(data);
   };

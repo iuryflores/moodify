@@ -8,15 +8,16 @@ import {
   TitleMedia,
   CreatorMedia,
   DescMedia,
-  MediaDetails,
+  MediaDetails
 } from "../components/Shared";
 import songImg from "../images/song.png";
 import MovieImg from "../images/movie.png";
-import ArrowIcon from '../images/arrow.png'
+import ArrowIcon from "../images/arrow.png";
 
 export const FilteredLists = () => {
   const [songs, setSongs] = useState([]);
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { mood } = useParams();
 
   useEffect(() => {
@@ -42,9 +43,10 @@ export const FilteredLists = () => {
       setSongs(filteredSongsArray.slice(0, 3));
     };
     getSetMedia();
-  }, [mood]);
-
-  return (
+    setLoading(false);
+  }, [mood, loading, setLoading]);
+  console.log(loading);
+  return !loading ? (
     <MediaList>
       {songs.map((song) => (
         <MediaCard to={`/media-details/${song._id}`} key={song._id}>
@@ -71,7 +73,7 @@ export const FilteredLists = () => {
               Title: <strong>{movie.title}</strong>
             </TitleMedia>
             <CreatorMedia>
-            Director: <strong>{movie.creator}</strong>
+              Director: <strong>{movie.creator}</strong>
             </CreatorMedia>
             <DescMedia>
               Year: <strong>{movie.year}</strong>
@@ -81,5 +83,7 @@ export const FilteredLists = () => {
         </MediaCard>
       ))}
     </MediaList>
+  ) : (
+    <div>Loading...</div>
   );
 };
