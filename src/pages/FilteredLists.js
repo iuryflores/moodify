@@ -22,7 +22,7 @@ export const FilteredLists = () => {
   useEffect(() => {
     const getSetMedia = async () => {
       const { data } = await axios.get(
-        "https://misty-plum-crab.cyclic.app/"
+        "https://misty-plum-crab.cyclic.app/medium"
       );
       const filteredMoviesArray = data
         .filter((media) => {

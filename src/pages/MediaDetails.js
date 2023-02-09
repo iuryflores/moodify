@@ -10,7 +10,7 @@ export const MediaDetails = () => {
   useEffect(() => {
     const getMediaDetails = async () => {
       const result = await axios.get(
-        `https://misty-plum-crab.cyclic.app/${_id}`
+        `https://misty-plum-crab.cyclic.app/medium${_id}`
       )
       const data = result.data
       setMedia(data)
