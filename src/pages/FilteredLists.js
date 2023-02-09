@@ -75,9 +75,9 @@ export const FilteredLists = () => {
             <CreatorMedia>
               Director: <strong>{movie.creator}</strong>
             </CreatorMedia>
-            <DescMedia>
+            {/* <DescMedia>
               Year: <strong>{movie.year}</strong>
-            </DescMedia>
+            </DescMedia> */}
           </MediaDetails>
           <Icon src={ArrowIcon} alt="Arrow" />
         </MediaCard>

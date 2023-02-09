@@ -9,7 +9,7 @@ import {
 } from "../components/Shared";
 import PlayIcon from "../images/play.png";
 
-const Media = ({ title, description, image, type, creator, year, link }) => {
+const Media = ({ title, description, image, type, creator, link }) => {
   let typeText, movieText, typeCreator
   if (type === "song") {
     typeText = "listen on Spotify";
@@ -20,6 +20,7 @@ const Media = ({ title, description, image, type, creator, year, link }) => {
     movieText = '14px';
     typeCreator = 'Director'
   }
+
   return (
     <MediaDetailCard>
       <ImgMedia>
@@ -32,9 +33,9 @@ const Media = ({ title, description, image, type, creator, year, link }) => {
         <CreatorMedia>
           {typeCreator}: <strong>{creator}</strong>
         </CreatorMedia>
-        <DescMedia>
+        {/* <DescMedia>
           Year: <strong>{year}</strong>
-        </DescMedia>
+        </DescMedia> */}
         <DescMedia>
           Type: <strong>{type}</strong>
         </DescMedia>

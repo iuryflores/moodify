@@ -8,7 +8,7 @@ export const QuestionList = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   let [getValue, setGetValue] = useState(0);
-console.log(questions)
+
   const getQuestions = async () => {
     const { data } = await axios.get(
       "https://misty-plum-crab.cyclic.app/question/"

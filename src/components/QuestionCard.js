@@ -12,7 +12,7 @@ export const QuestionCard = ({
   const handleClickAnswer = (index) => {
     setActiveAnswer(index);
   };
-console.log(answerOptions)
+
   return (
     <Card key={_id}>
       <p style={{ fontSize: "20px" }}>
